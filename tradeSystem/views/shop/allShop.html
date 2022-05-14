@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    已经注册的小店如下：<br><br>
+    {{range .maps}}
+        账号:{{.UserAccount}}
+        店铺id:{{.ShopId}}
+    <button onclick="window.location.href='./shopdetails?shopId={{.ShopId}}'" type="button" name="shopId">进店查看</button>
+    <br><br>
+    {{end}}
+</body>
+</html>

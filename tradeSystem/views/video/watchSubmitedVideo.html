@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watchSubmitedVideo</title>
+</head>
+<body>
+    {{range .videos}}
+    视频标题:{{.VideoTitle}}<br>
+    上传者:{{.SubmitUser}}<br>
+    上传时间:{{.SubmitTime}}<br>
+    <video width="500" height="500" controls>
+        <source src="{{.VideoUrl}}" type="video/mp4">
+    </video><br>
+    {{end}}
+</body>
+</html>

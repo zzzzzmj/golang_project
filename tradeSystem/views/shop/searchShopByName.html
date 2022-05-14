@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>searchShopByName</title>
+</head>
+<body>
+    <h3>搜索结果如下：</h3>
+   {{range .maps}}
+        店铺id:{{.shopId}}
+        商品名称:{{.goodsName}}
+        单价:{{.price}}
+    <button onclick="window.location.href='./shopdetails?shopId={{.shopId}}'" type="button" id="skip">进店购买</button><br><br>
+    <br><br>
+    {{end}}
+</body>
+</html>

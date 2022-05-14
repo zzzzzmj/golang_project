@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h3 align="center">欢迎来到二手交易系统</h3><br>
+    {{if.isLogin}}
+        您已登录<br>当前账户为:{{.ua}}<br>
+    {{else}}
+        您未登录<br>
+    {{end}}
+    <button onclick="window.location.href='/login'" type="button" id="login">登录</button><br><br>
+    <button onclick="window.location.href='/register'" type="button" id="register">注册</button><br><br>
+    <button onclick="window.location.href='/logout'" type="button" id="logout">登出</button><br><br>
+    <button onclick="window.location.href='/filter/shop'">商圈</button><br><br>
+    <button onclick="window.location.href='/filter/chat'">聊天</button><br><br>
+    <button onclick="window.location.href='/filter/video'">刷会视频</button><br><br>
+</body>
+</html>

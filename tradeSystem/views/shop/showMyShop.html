@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myShop</title>
+</head>
+<body>
+
+    <h3 align="center">我的小店</h3>
+    <button onclick="window.location.href='./createGoods'" type="button" id="createGoods">商品上架</button><br><br>
+    <button onclick="window.location.href='./removeGoods'" type="button" id="removeGoods">商品下架</button><br><br>
+    {{.states}}<br>
+    <table border="1">
+        <tr>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>金额</th>
+            <th>数量</th>
+            <th>状态</th>
+            <th>添加图片描述</th>
+            <th>实物图片</th>
+        </tr>
+            {{range .goodsList}}
+                {{if  eq .State "OnSale"}}
+                  <tr>
+                    <td>{{.GoodsId}}</td>
+                    <td>{{.GoodsName}}</td>
+                    <td>{{.Price}}</td>
+                    <td>{{.Amount}}</td>
+                    <td>{{.State}}</td><br>
+                    <td><button onclick="window.location.href='/filter/shop/addImage?goodsId={{.GoodsId}}'">添加商品图片</button></td>
+                    <td>  <img src="{{.ImageUrl}}" width="70" height="70"></td>
+                  </tr>
+                {{end}}
+            {{end}}
+
+    </table>
+
+</body>
+</html>

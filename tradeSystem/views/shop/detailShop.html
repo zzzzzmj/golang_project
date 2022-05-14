@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商店</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>商品id</th>
+            <th>商品名称</th>
+            <th>数量</th>
+            <th>金额</th>
+            <th>商品状态</th>
+        </tr>
+        {{range .maps }}
+        <tr>
+            <td>{{.GoodsId}}</td>
+            <td>{{.GoodsName}}</td>
+            <td>{{.Amount}}</td>
+            <td>{{.Price}}</td>
+            <td>{{.State}}</td>
+            <td><button onclick="window.location.href='../buy?goodsId={{.GoodsId}}&shopId={{.ShopId}}'">立即购买</button></td>
+        </tr>
+        {{end}}
+    </table>
+
+</body>
+</html>

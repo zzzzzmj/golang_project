@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单</title>
+</head>
+<body>
+    {{.map.buyerId}}您此次交易的订单如下：<br>
+    买家Id:{{.map.buyerId}}<br>
+    卖家Id:{{.map.sellerId}}<br>
+    商品编号:{{.map.goodsId}}<br>
+    商品名称:{{.map.goodsName}}<br>
+    总金额:￥{{.map.totalPrice}}元<br>
+    订单创建时间:{{.map.createTime}}<br>
+</body>
+</html>

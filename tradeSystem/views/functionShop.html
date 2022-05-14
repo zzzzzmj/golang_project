@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="window.location.href='./shop/index'" type="button" id="shopIndex">我的小店</button><br><br>
+    <button onclick="window.location.href='./shop/searchAllShop'" type="button" id="searchAllShop">查看已经注册的小店</button><br><br>
+    <form method="post" action="/filter/shop/searchShopById">请输入搜索的店铺Id<br><input type="text" name="shopId"><br><input type="submit" value="搜索"><br></form>
+    <form method="post" action="/filter/shop/searchShopByName">请输入搜索的物品名称<br><input type="text" name="goodsName"><br><input type="submit" value="搜索"></form>
+</body>
+</html>

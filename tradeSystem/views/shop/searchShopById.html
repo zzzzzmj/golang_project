@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索详情页</title>
+</head>
+<body>
+    {{ range .maps }}
+        所有者账号：{{.ShopId }}<br>
+        店铺id：{{.UserAccount}}<br>
+         <button onclick="window.location.href='./shopdetails?shopId={{.ShopId}}'" type="button" name="shopId">进店查看</button>
+        <br><br>
+    {{end}}
+</body>
+</html>

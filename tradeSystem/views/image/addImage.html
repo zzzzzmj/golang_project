@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册</title>
+</head>
+<body>
+<div id="main">
+    <form method="post" enctype="multipart/form-data" action="/filter/shop/upLoadImage">
+        <input type="file" name="upload"><br>
+        <input type="submit" value="提交图片"><br>
+        上传的图片对应的货物编号:<input type="text" name="goodsId" value="{{.goodsId}}" readonly>
+    </form>
+</div>
+</body>
+</html>

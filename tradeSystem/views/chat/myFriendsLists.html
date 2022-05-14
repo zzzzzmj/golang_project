@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myFriendsLists</title>
+</head>
+<body>
+    {{if .empty}}
+        您的列表暂时还没有好友哟~~~~
+    {{else}}
+        {{range .fLists}}
+            好友账号:{{.FriendId}}
+            <button onclick="window.location.href='/filter/chat/createChat?friendId={{.FriendId}}'">发起聊天</button>
+    <br>
+    {{end}}
+    {{end}}
+</body>
+</html>

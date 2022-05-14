@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dealRequests</title>
+</head>
+<body>
+    {{range .maps}}
+        {{if eq .RequestsState "等待对方验证" }}
+            发送方Id:{{.SenderId}}
+            验证信息:{{.Notes}}
+            发送时间:{{.SendTime}}
+            <button onclick="window.location.href='/filter/dealRequests?res=Yes&senderId={{.SenderId}}'">同意好友请求</button>
+            <button onclick="window.location.href='/filter/dealRequests?res=No&senderId={{.SenderId}}'">拒绝好友请求</button>
+        {{else}}
+        您暂时还没有好友请求哦~~~
+        {{end}}
+        <br><br>
+    {{end}}
+</body>
+</html>
